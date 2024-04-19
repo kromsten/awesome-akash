@@ -25,7 +25,7 @@ mkdir -p /root/bitcoin/log
 cat > /root/bitcoin/run <<EOF 
 #!/bin/bash
 exec 2>&1
-exec bitcoind -port=8333 -prune=$PRUNE
+exec bitcoind -port=8333 -txindex
 EOF
 cat > /root/bitcoin/log/run <<EOF 
 #!/bin/bash
